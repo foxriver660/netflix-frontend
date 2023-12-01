@@ -5,7 +5,7 @@ import Sidebar from './sidebar/Sidebar'
 
 const Layout: FC<any> = ({ children }) => {
 	return (
-		<div className={styles.navigation}>
+		<div className={styles.layout}>
 			<Navigation />
 			<div className={styles.center}>{children}</div>
 			<Sidebar />
