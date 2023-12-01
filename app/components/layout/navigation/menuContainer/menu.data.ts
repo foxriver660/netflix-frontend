@@ -1,6 +1,6 @@
 import { IMenu } from './menu.interface'
 
-const homeMenu: IMenu = {
+export const homeMenu: IMenu = {
 	title: 'Menu',
 	items: [
 		{

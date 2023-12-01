@@ -1,0 +1,5 @@
+.li {
+	&:active {
+		@apply text-white border-yellow-700;
+	}
+}
