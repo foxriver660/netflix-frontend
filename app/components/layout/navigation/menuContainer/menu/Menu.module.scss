@@ -7,7 +7,7 @@
 
 	.ul {
 		> li {
-			&:active {
+			&.activeLink {
 				@apply border-r-primary;
 				> a > svg {
 					@apply fill-primary;

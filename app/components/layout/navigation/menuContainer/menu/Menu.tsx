@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { IMenu } from './menu.interface'
 import styles from './Menu.module.scss'
-import MenuItem from './menuItem/MenuItem'
-import AuthItems from './auth/AuthItems'
+import MenuItem from '../menuItem/MenuItem'
+import AuthItems from '../auth/AuthItems'
 
 const Menu: FC<{ menu: IMenu }> = ({ menu: { title, items } }) => {
 	return (

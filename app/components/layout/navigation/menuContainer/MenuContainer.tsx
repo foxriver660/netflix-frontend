@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './MenuContainer.module.scss'
-import Menu from './Menu'
-import { homeMenu, userMenu } from './menu.data'
+import Menu from './menu/Menu'
+import { homeMenu, userMenu } from './data/menu.data'
 const MenuContainer = () => {
 	return (
 		<div>
