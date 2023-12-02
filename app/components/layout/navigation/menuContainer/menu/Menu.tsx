@@ -4,7 +4,7 @@ import styles from './Menu.module.scss'
 import MenuItem from './menuItem/MenuItem'
 import AuthItems from '../auth/AuthItems'
 
-const Menu: FC<{ menu: IMenu }> = ({ menu: { title, items } }) => {
+const Menu: FC<IMenu> = ({ title, items }) => {
 	return (
 		<div className={styles.menu}>
 			<div className={styles.heading}>{title}</div>

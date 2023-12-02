@@ -8,8 +8,6 @@ import MaterialIcon from '@/components/ui/MaterialIcon'
 
 const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	const { asPath } = useRouter()
-	console.log(asPath === item.link)
-	console.log(item.link)
 	return (
 		<li
 			className={cn({

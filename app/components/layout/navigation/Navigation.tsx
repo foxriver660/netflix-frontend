@@ -1,4 +1,4 @@
-import Logo from './Logo'
+import Logo from './logo/Logo'
 import styles from './Navigation.module.scss'
 import MenuContainer from './menuContainer/MenuContainer'
 
