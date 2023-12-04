@@ -1,3 +1,4 @@
+import Layout from '@/components/layout/Layout'
 import React, { FC } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 const queryClient = new QueryClient({
@@ -9,7 +10,9 @@ const queryClient = new QueryClient({
 })
 const MainProvider: FC<any> = ({ children }) => {
 	return (
-		<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+		<QueryClientProvider client={queryClient}>
+			<Layout>{children}</Layout>
+		</QueryClientProvider>
 	)
 }
 
