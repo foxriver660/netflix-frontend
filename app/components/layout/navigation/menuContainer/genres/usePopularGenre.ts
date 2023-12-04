@@ -15,7 +15,7 @@ export const usePopularGenre = () => {
 						return {
 							icon: genre.icon,
 							link: getGenreUrl(genre.slug),
-							title: genre.title,
+							title: genre.name,
 						} as IMenuItem
 					})
 					.splice(0, 4),
