@@ -1,6 +1,7 @@
 import Layout from '@/components/layout/Layout'
 import React, { FC } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import ReduxToast from './ReduxToast'
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
@@ -11,6 +12,7 @@ const queryClient = new QueryClient({
 const MainProvider: FC<any> = ({ children }) => {
 	return (
 		<QueryClientProvider client={queryClient}>
+			<ReduxToast />
 			<Layout>{children}</Layout>
 		</QueryClientProvider>
 	)
