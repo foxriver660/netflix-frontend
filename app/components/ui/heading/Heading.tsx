@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 interface IHeading {
 	title: string
-	className: string
+	className?: string
 }
 
 const Heading: FC<IHeading> = ({ title, className }) => {

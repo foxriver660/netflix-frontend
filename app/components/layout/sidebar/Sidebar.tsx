@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import styles from './Sidebar.module.scss'
 import Search from './search/Search'
+import MoviesContainer from './movies-container/MoviesContainer'
 
 export const Sidebar: FC = () => {
 	return (
 		<div className={styles.sidebar}>
 			<Search />
-			{/* MOVIE */}
+			<MoviesContainer />
 		</div>
 	)
 }
