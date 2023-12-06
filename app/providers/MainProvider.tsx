@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import ReduxToast from './ReduxToast'
 import { Provider } from 'react-redux'
 import { store } from '@/store/store'
+import HeadProvider from './head-provider/HeadProvider'
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
@@ -13,12 +14,14 @@ const queryClient = new QueryClient({
 })
 const MainProvider: FC<any> = ({ children }) => {
 	return (
-		<Provider store={store}>
-			<QueryClientProvider client={queryClient}>
-				<ReduxToast />
-				<Layout>{children}</Layout>
-			</QueryClientProvider>
-		</Provider>
+		<HeadProvider>
+			<Provider store={store}>
+				<QueryClientProvider client={queryClient}>
+					<ReduxToast />
+					<Layout>{children}</Layout>
+				</QueryClientProvider>
+			</Provider>
+		</HeadProvider>
 	)
 }
 
