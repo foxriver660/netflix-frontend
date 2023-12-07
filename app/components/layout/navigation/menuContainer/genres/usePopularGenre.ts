@@ -11,7 +11,6 @@ export const usePopularGenre = () => {
 			select: ({ data }) =>
 				data
 					.map((genre) => {
-						console.log(genre)
 						return {
 							icon: genre.icon,
 							link: getGenreUrl(genre.slug),
