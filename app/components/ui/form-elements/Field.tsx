@@ -11,7 +11,7 @@ const Field = forwardRef<HTMLInputElement, IField>(
 					<span>{label}</span>
 					<input placeholder={placeholder} ref={ref} {...rest} />
 				</label>
-				{error && <div className={styles.error}>{error.message}</div>}
+				{error && <div className={styles.error}>{error.message as string}</div>}
 			</div>
 		)
 	}
