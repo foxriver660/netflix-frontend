@@ -6,19 +6,19 @@ import { toastr } from 'react-redux-toastr'
 import { AuthService } from '@/services/auth/auth.service'
 import { toastError } from '@/utils/toasts/toastError'
 
-export const register = createAsyncThunk<IAuthResponse, InterfaceEmailPassword>(
-	'auth/register',
-	async ({ email, password }, thunkAPI) => {
-		try {
-			const response = await AuthService.register(email, password)
-			toastr.success('Registration', 'Completed successfully')
-			return response.data
-		} catch (error) {
-			toastError(error)
-			return thunkAPI.rejectWithValue(error)
-		}
+export const registration = createAsyncThunk<
+	IAuthResponse,
+	InterfaceEmailPassword
+>('auth/register', async ({ email, password }, thunkAPI) => {
+	try {
+		const response = await AuthService.register(email, password)
+		toastr.success('Registration', 'Completed successfully')
+		return response.data
+	} catch (error) {
+		toastError(error)
+		return thunkAPI.rejectWithValue(error)
 	}
-)
+})
 
 export const login = createAsyncThunk<IAuthResponse, InterfaceEmailPassword>(
 	'auth/login',
