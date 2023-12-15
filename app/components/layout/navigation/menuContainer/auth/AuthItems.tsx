@@ -4,6 +4,7 @@ import MenuItem from '../menu/menuItem/MenuItem'
 import LogoutButton from './LogoutButton'
 import { getAdminHomeUrl } from '@/config/url.config'
 
+// ! ПОПРАВИТЬ БАГ С HYDR
 const AuthItems = () => {
 	const { user } = useAuth()
 	console.log(user)
@@ -21,7 +22,7 @@ const AuthItems = () => {
 					<LogoutButton />
 				</>
 			) : (
-				<MenuItem item={{ icon: 'MdLogin', link: '/Auth', title: 'Login' }} />
+				<MenuItem item={{ icon: 'MdLogin', link: '/auth', title: 'Login' }} />
 			)}
 			{user?.isAdmin && (
 				<MenuItem
